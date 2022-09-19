@@ -1,4 +1,4 @@
-## CC-NCALC-Surface-API
+## CC-NCALC Surface API
 **Date Created:** 09/18/2022
 
 **Date Last Modified:** 09/19/2022
