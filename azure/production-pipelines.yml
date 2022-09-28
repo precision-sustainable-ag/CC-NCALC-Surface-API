@@ -12,7 +12,7 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'b181855a-e259-4f5f-a332-9eac0335ac6d'
-  imageRepository: 'precisionsustainableagdstselector'
+  imageRepository: 'ncalc'
   containerRegistry: 'containerregistry4pd7i.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
@@ -56,7 +56,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'precisionsustainableagdstselector-2032.production'
+    environment: 'ncalc-2032.production'
     strategy:
       runOnce:
         deploy:
@@ -86,7 +86,7 @@ stages:
     pool:
       vmImage: $(vmImageName)
 
-    environment: 'precisionsustainableagdstselector-2032.$(k8sNamespaceForPR)'
+    environment: 'ncalc-2032.$(k8sNamespaceForPR)'
     strategy:
       runOnce:
         deploy:
