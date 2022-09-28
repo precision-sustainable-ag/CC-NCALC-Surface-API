@@ -1,0 +1,66 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx
+  namespace: develop
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - "covercrop-ncalc.org"
+    secretName: precisionsustainableagccn
+  rules:
+  - host: "covercrop-ncalc.org"
+    http:
+      paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+              name: precisionsustainableagccn
+              port:
+                number: 80
+        - pathType: Prefix
+          path: "/*"
+          backend:
+            service:
+              name: precisionsustainableagccn
+              port:
+                number: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx
+  namespace: production
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - "covercrop-ncalc.org"
+    secretName: precisionsustainableagccn
+  rules:
+  - host: "covercrop-ncalc.org"
+    http:
+      paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+              name: precisionsustainableagccn
+              port:
+                number: 80
+        - pathType: Prefix
+          path: "/species-selector*"
+          backend:
+            service:
+              name: precisionsustainableagccn
+              port:
+                number: 80
+        - pathType: Prefix
+          path: "/*"
+          backend:
+            service:
+              name: precisionsustainableagccn
+              port:
+                number: 80

@@ -28,6 +28,6 @@ const ccncalc = require('./cc-ncalc');
 
 app.get('/surface', ccncalc.surface);
 
-app.listen(1002);
+app.listen(80);
 
 console.log('Running!');
