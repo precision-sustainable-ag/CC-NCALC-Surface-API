@@ -11,12 +11,12 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'b181855a-e259-4f5f-a332-9eac0335ac6d'
-  imageRepository: 'ncalc'
+  dockerRegistryServiceConnection: 'fd1027c4-6f6c-44bc-a865-e02451031e23'
+  imageRepository: 'precisionsustainableagccncalcsurfaceapi'
   containerRegistry: 'containerregistry4pd7i.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'containerregistry4pd7i129056ca-auth'
+  imagePullSecret: 'containerregistry4pd7i299999f0-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -56,7 +56,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'ncalc-2032.production'
+    environment: 'precisionsustainableagccncalcsurfaceapi.develop'
     strategy:
       runOnce:
         deploy:
@@ -86,12 +86,12 @@ stages:
     pool:
       vmImage: $(vmImageName)
 
-    environment: 'ncalc-2032.$(k8sNamespaceForPR)'
+    environment: 'precisionsustainableagccncalcsurfaceapi.$(k8sNamespaceForPR)'
     strategy:
       runOnce:
         deploy:
           steps:
-          - reviewApp: production
+          - reviewApp: develop
 
           - task: Kubernetes@1
             displayName: 'Create a new namespace for the pull request'
