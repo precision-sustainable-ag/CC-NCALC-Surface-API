@@ -19,3 +19,10 @@ spec:
               name: precisionsustainableagccncalcsurfaceapi
               port:
                 number: 80
+        - pathType: Prefix
+          path: "/*"
+          backend:
+            service:
+              name: precisionsustainableagccncalcsurfaceapi
+              port:
+                number: 80
