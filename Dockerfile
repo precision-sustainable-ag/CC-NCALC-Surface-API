@@ -2,7 +2,7 @@ FROM node:18 as builder
 WORKDIR /
 COPY . .
 RUN npm install
-EXPOSE 80
+EXPOSE 1000
 ENTRYPOINT npm start
 
 FROM nginx:1.23.1-alpine
