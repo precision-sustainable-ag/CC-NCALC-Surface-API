@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: precisionsustainableagccncalcsurfaceapi 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: precisionsustainableagccncalcsurfaceapi
+  template:
+    metadata:
+      labels:
+        app: precisionsustainableagccncalcsurfaceapi 
+    spec:
+      containers:
+        - name: precisionsustainableagccncalcsurfaceapi 
+          image: containerregistry4pd7i.azurecr.io/precisionsustainableagccncalcsurfaceapi
+          ports:
+          - containerPort: 1002
