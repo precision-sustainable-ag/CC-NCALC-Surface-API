@@ -16,4 +16,4 @@ spec:
         - name: precisionsustainableagccncalcsurfaceapi 
           image: containerregistry4pd7i.azurecr.io/precisionsustainableagccncalcsurfaceapi
           ports:
-          - containerPort: 1002
+          - containerPort: 80
