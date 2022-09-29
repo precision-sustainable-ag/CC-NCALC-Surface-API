@@ -19,18 +19,18 @@ spec:
             service:
               name: precisionsustainableagccn
               port:
-                number: 80
+                number: 1002
         - pathType: Prefix
           path: "/species-selector*"
           backend:
             service:
               name: precisionsustainableagccn
               port:
-                number: 80
+                number: 1002
         - pathType: Prefix
           path: "/*"
           backend:
             service:
               name: precisionsustainableagccn
               port:
-                number: 80
+                number: 1002

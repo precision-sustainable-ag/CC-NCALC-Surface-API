@@ -17,4 +17,4 @@ spec:
         - name: precisionsustainableagccn 
           image: containerregistry4pd7i.azurecr.io/precisionsustainableagccn
           ports:
-          - containerPort: 80
+          - containerPort: 1002
