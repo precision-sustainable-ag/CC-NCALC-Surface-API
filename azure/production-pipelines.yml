@@ -56,7 +56,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'precisionsustainableagccncalcsurfaceapi-4209.production'
+    environment: 'dstncalcapi-4209.production'
     strategy:
       runOnce:
         deploy:
@@ -86,7 +86,7 @@ stages:
     pool:
       vmImage: $(vmImageName)
 
-    environment: 'precisionsustainableagccncalcsurfaceapi-4209.$(k8sNamespaceForPR)'
+    environment: 'dstncalcapi-4209.$(k8sNamespaceForPR)'
     strategy:
       runOnce:
         deploy:
