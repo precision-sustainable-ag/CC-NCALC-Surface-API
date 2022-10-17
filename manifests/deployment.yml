@@ -1,19 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: precisionsustainableagccncalcsurfaceapi 
+  name: dstncalcapi 
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: precisionsustainableagccncalcsurfaceapi
+      app: dstncalcapi
   template:
     metadata:
       labels:
-        app: precisionsustainableagccncalcsurfaceapi 
+        app: dstncalcapi 
     spec:
       containers:
-        - name: precisionsustainableagccncalcsurfaceapi 
-          image: containerregistry4pd7i.azurecr.io/precisionsustainableagccncalcsurfaceapi
+        - name: dstncalcapi 
+          image: containerregistry4pd7i.azurecr.io/dstncalcapi
           ports:
           - containerPort: 80
