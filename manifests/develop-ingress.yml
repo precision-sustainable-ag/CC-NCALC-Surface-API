@@ -7,7 +7,7 @@ spec:
   tls:
   - hosts:
     - "develop.covercrop-ncalc.org"
-    secretName: precisionsustainableagccncalcsurfaceapi
+    secretName: dstncalcapi
   rules:
   - host: "develop.covercrop-ncalc.org"
     http:
@@ -16,13 +16,13 @@ spec:
           path: "/"
           backend:
             service:
-              name: precisionsustainableagccncalcsurfaceapi
+              name: dstncalcapi
               port:
                 number: 80
         - pathType: Prefix
           path: "/*"
           backend:
             service:
-              name: precisionsustainableagccncalcsurfaceapi
+              name: dstncalcapi
               port:
                 number: 80
