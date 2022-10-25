@@ -1,7 +1,7 @@
 ## CC-NCALC Surface API
 **Date Created:** 09/18/2022
 
-**Date Last Modified:** 09/19/2022
+**Date Last Modified:** 10/25/2022
 
 This is the API for the surface model of CC-NCALC.
 
@@ -25,4 +25,4 @@ This is the API for the surface model of CC-NCALC.
    This will install project dependencies. A full list of the dependencies can be found in package.json. If you are running on a windows machine delete package-lock.json prior to running the command.
 6. To run the code locally:
    `npm start`
-7. You can then view the application at http://localhost:1002/.
+7. You can then view the application at http://localhost.

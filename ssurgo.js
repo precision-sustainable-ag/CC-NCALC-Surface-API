@@ -333,7 +333,7 @@ const ssurgo = (req, res) => {
   } // outputData
 
   if (!req.query.lat && !req.query.mukey) {
-    res.sendFile(__dirname + '/public/ssurgo2/index.html');
+    res.redirect('/');
     return;
   }
 
