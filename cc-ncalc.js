@@ -615,7 +615,7 @@ res.json({
     output();
   } // SSURGOCallback
 
-  const url = `https://api.precisionsustainableag.org/weather/hourly?lat=${lat}&lon=${lon}&start=${start}&end=${end}&attributes=air_temperature,relative_humidity,precipitation&options=predicted`;
+  const url = `https://weather.covercrop-data.org/hourly?lat=${lat}&lon=${lon}&start=${start}&end=${end}&attributes=air_temperature,relative_humidity,precipitation&options=predicted`;
   axios.get(url)
     .then(response => {
       weatherCallback(response.data);
