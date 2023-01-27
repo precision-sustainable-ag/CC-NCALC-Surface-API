@@ -198,7 +198,7 @@ const surfaceModel = (res, {FOMkg, FOMpctN, FOMpctCarb, FOMpctCell, FOMpctLign, 
       S.DeLign[t] = S.DeLign[t + 1] = S.LignK*S.RMTFAC[t]*S.CNRF[t]*S.ContactFactor[t];
       S.GRNOm3[t] = S.GRNOm3[t + 1] = Math.max(0, S.LigninN[t]*S.DeLign[t]);
       S.GRNom[t] = S.GRNom[t + 1] = S.GrNom1[t]+S.GRNom2[t]+S.GRNOm3[t];
-      S.FractionHumified = 0.125;
+      S.FractionHumified = 0.55; // Changed 23-0127
       S.FOMNhum[t] = S.FOMNhum[t + 1] = Math.max(0, S.GRNom[t]*S.FractionHumified);
       S.GRCom1[t] = S.GRCom1[t + 1] = Math.max(0, S.Carb[t]*S.DeCarb[t]);
       S.GRCom2[t] = S.GRCom2[t + 1] = Math.max(0, S.Cell[t]*S.DeCell[t]);
@@ -363,7 +363,7 @@ const surfaceModel = (res, {FOMkg, FOMpctN, FOMpctCarb, FOMpctCell, FOMpctLign, 
       S.DeLign[t] = S.DeLign[t + 1] = S.LignK*S.RMTFAC[t]*S.CNRF[t]*S.ContactFactor[t];
       S.GRNOm3[t] = S.GRNOm3[t + 1] = Math.max(0, S.LigninN[t]*S.DeLign[t]);
       S.GRNom[t] = S.GRNom[t + 1] = S.GrNom1[t]+S.GRNom2[t]+S.GRNOm3[t];
-      S.FractionHumified = 0.125;
+      S.FractionHumified = 0.55; // Changed 23-0127
       S.FOMNhum[t] = S.FOMNhum[t + 1] = Math.max(0, S.GRNom[t]*S.FractionHumified);
       S.GRCom1[t] = S.GRCom1[t + 1] = Math.max(0, S.Carb[t]*S.DeCarb[t]);
       S.GRCom2[t] = S.GRCom2[t + 1] = Math.max(0, S.Cell[t]*S.DeCell[t]);
