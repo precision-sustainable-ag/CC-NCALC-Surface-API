@@ -3,7 +3,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- develop
+- main
 
 resources:
 - repo: self
@@ -11,12 +11,12 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'f8968fd5-d441-4b8f-83aa-af1ed31530d1'
+  dockerRegistryServiceConnection: '125ae015-de65-45cc-9626-01180f305836'
   imageRepository: 'dstncalcapi'
   containerRegistry: 'containerregistry4pd7i.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'containerregistry4pd7i587069af-auth'
+  imagePullSecret: 'containerregistry4pd7i72939ea0-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -56,7 +56,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'precisionsustainableagccncalcsurfaceapi-7288.production'
+    environment: 'precisionsustainableagccncalcsurfaceapi-1649.production'
     strategy:
       runOnce:
         deploy:
@@ -86,7 +86,7 @@ stages:
     pool:
       vmImage: $(vmImageName)
 
-    environment: 'precisionsustainableagccncalcsurfaceapi-7288.$(k8sNamespaceForPR)'
+    environment: 'precisionsustainableagccncalcsurfaceapi-1649.$(k8sNamespaceForPR)'
     strategy:
       runOnce:
         deploy:
